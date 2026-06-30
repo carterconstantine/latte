@@ -1,3 +1,4 @@
-audioop-lts
-py-cord
+nextcord
+websockets
+requests
 python-dotenv
