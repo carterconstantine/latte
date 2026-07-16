@@ -2,7 +2,6 @@ import nextcord
 from nextcord.ext import commands
 from dotenv import load_dotenv
 import os
-import asyncio
 
 from utils import save_data
 from utils import logger
@@ -46,7 +45,6 @@ async def on_ready():
 
     await logger.log(bot, "Now loading cogs...")
 
-    bot.load_extension("cogs.score_feed")
     bot.load_extension("cogs.calculator")
     bot.load_extension("cogs.cat")
     bot.load_extension("cogs.chomp")
