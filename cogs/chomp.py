@@ -59,6 +59,13 @@ class Chomp(commands.Cog):
                 f"Latte tried to {chomp_text} {target.mention}, but they were too powerful.")
             return
 
+        if unchompable_role in target.roles:
+            self.update_chomp_cooldown(now + 30, random_chomp)
+            await logger.log(self.bot,f"{interaction.user.name} tried to {chomp_text} {target.name}, but they had the anti cat spray role.")
+            await interaction.response.send_message(
+                f"Latte tried to {chomp_text} {target.mention}, but they used anti cat spray.")
+            return
+
         chomp_duration = datetime.timedelta(minutes=2)
         backfire = random.randint(1, 10) == 1
 
