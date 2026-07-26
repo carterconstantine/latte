@@ -97,7 +97,7 @@ class Chomp(commands.Cog):
 
         if unchompable_role in interaction.user.roles:
             await interaction.response.send_message(
-                "You cannot chomp unless you're chompable. (Remove your anti cat spray role to join the fun!)",
+                "You cannot ultimately chomp unless you're chompable. (Remove your anti cat spray role to join the fun!)",
                 ephemeral=True)
             return
 
