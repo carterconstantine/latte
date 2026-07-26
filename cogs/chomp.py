@@ -90,7 +90,7 @@ class Chomp(commands.Cog):
         await logger.log(self.bot,f"{interaction.user.name} {chomp_text}ed {target.name}")
         await target.timeout(chomp_duration, reason="Eaten by Latte")
 
-    @nextcord.slash_command(name="chomp", description="Make Latte eat a specific user!")
+    @nextcord.slash_command(name="ultimate_chomp", description="Make Latte ultimately eat a specific user!")
     async def ultimate_chomp(self, interaction: nextcord.Interaction, target: nextcord.Member = None):
         unchompable_role = interaction.guild.get_role(1503897277608235133)
         admin_role = interaction.guild.get_role(1451663804701343816)
